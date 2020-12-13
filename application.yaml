@@ -1,0 +1,46 @@
+server:
+  port: 8021
+  error:
+        include-message: always
+        include-stacktrace: on_trace_param
+#mysql dummy
+spring:
+  application:
+    name: kocfinans-applicationProject
+  datasource:
+    url: jdbc:mysql://160.153.133.146:3306/kocfinansapp?useUnicode=yes&characterEncoding=UTF-8
+    username: kocfinansapp
+    password: 'Test1234-'
+    connectionTimeout: 60000
+    #driver-class-name: com.mysql.jdbc.Driver
+    #driverClassName: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        naming:
+            physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl  
+       
+  #jpa:
+   # hibernate:
+    #    dll-auto: update
+    
+    #driver-class-name: com.mysql.jdbc.Driver
+
+
+ 
+
+#management:
+ #   endpoints:
+  #      web:
+   #         exposure:
+    #            include: "*"
+
+
+
+project-constants:
+  environment: prod
+  constantLimitMultiplier: 4
+  getCreditPointService:
+    url: 'https://www.google.com.tr'
+    token: EYASDASDASDASODKASODKASODK
+ 
